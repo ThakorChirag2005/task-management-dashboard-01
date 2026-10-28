@@ -1,0 +1,333 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.header {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    color: #777;
+    margin-bottom: 0;
+}
+
+.workspace {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.workspace-icon {
+    background: #3158d8;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+.welcome-section {
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #777;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.summary-card,
+.panel {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.summary-card p {
+    color: #777;
+}
+
+.summary-card h2 {
+    margin-bottom: 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-button {
+    background: #3158d8;
+    color: white;
+}
+
+.secondary-button {
+    background: #eee;
+    color: #333;
+}
+
+.delete-button {
+    background: #d21d1d;
+    color: rgba(204, 15, 15, 0.095);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-buttons,
+.task-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.task-card {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 15px;
+    background: rgb(234, 228, 228);
+    min-width: 0;
+}
+
+.task-top,
+.task-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.task-top h3 {
+    overflow-wrap: anywhere;
+}
+
+.task-description {
+    color: #777;
+    overflow-wrap: anywhere;
+}
+
+.badge {
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.priority-high {
+    background: #ffe3e3;
+}
+
+.priority-medium {
+    background: #fff0cc;
+}
+
+.priority-low {
+    background: #dff5e5;
+}
+
+.status-pending {
+    background: #fff0cc;
+}
+
+.status-in-progress {
+    background: #dce8ff;
+}
+
+.status-completed {
+    background: #dff5e5;
+}
+
+.error-message {
+    color: red;
+}
+
+.empty-message {
+    color: #777;
+    padding: 10px 0;
+}
+
+@media (max-width: 800px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .task-grid,
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .app.dark-mode{
+        background-color: #121212;
+    color: white;
+    min-height: 100vh;
+    }
+    .theme-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #eeeeee;
+    color: #222222;
+    }
+   
+}
+/* Dark Mode */
+.app.dark-mode {
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+.app.dark-mode .header {
+    background-color: #1e1e1e;
+    color: white;
+    border-bottom: 1px solid #444;
+}
+
+.app.dark-mode .header p {
+    color: #cccccc;
+}
+
+/* Main Sections */
+.app.dark-mode .summary-card,
+.app.dark-mode .panel,
+.app.dark-mode .task-card {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #444;
+}
+
+/* Paragraphs */
+.app.dark-mode .welcome-section p,
+.app.dark-mode .summary-card p,
+.app.dark-mode .task-description,
+.app.dark-mode .empty-message {
+    color: #cccccc;
+}
+
+/* Input Fields */
+.app.dark-mode input,
+.app.dark-mode textarea,
+.app.dark-mode select {
+    background-color: #292929;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Theme Button */
+.theme-button {
+    padding: 10px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+.app.dark-mode .theme-button {
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+/* Other Buttons */
+.app.dark-mode .secondary-button {
+    background-color: #444;
+    color: white;
+}
