@@ -4,7 +4,7 @@ export const fetchTasks = createAsyncThunk(
     "tasks/fetchTasks",
     async () => {
         const response = await fetch(
-            "https://jsonplaceholder.typicode.com/todos?_limit=1000"
+            "https://jsonplaceholder.typicode.com/todos?_limit=10"
         );
 
         if (!response.ok) {
